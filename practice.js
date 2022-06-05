@@ -27,3 +27,44 @@ const extractStr = (value, num) => {
   return newArr.join('').toString();
 }
 console.log(extractStr('Benjamin', 5));
+
+// Write a JavaScript function to parameterize a string.
+
+const connectStr = (value) => value.split('').join('-').toLowerCase();
+console.log(connectStr('I Love My Wife'));
+
+// closure
+
+function outerParent(){
+    const outerVar = 'outer';
+    function innerChild(){
+        console.log(outerVar);
+    }
+    innerChild();
+}
+outerParent();
+
+// Event loop 
+
+console.log(1);
+setTimeout(() => console.log(2), 2000);
+console.log(3);
+setTimeout(() => console.log(4), 1000);
+
+
+// function declaration
+declaration();
+function declaration(){
+    console.log(1);
+}
+
+// function expression
+const expression = function(){
+    console.log(2);
+}
+expression();
+
+// arrow function
+
+const arrow = () => console.log(3);
+arrow();
